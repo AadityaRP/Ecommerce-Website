@@ -13,6 +13,10 @@ import OrderSummary from './pages/OrderSummary';
 import Payment from './pages/Payment';
 import OrderConfirmation from './pages/OrderConfirmation';
 import MaruthompalPage from './pages/MaruthompalPage';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsConditions from './pages/TermsConditions';
+import RefundPolicy from './pages/RefundPolicy';
+import ShippingPolicy from './pages/ShippingPolicy';
 import './index.css';
 
 const App: React.FC = () => {
@@ -31,6 +35,10 @@ const App: React.FC = () => {
           <Route path="/payment" element={<Payment />} />
           <Route path="/order-confirmed" element={<OrderConfirmation />} />
           <Route path="/maruthompal" element={<MaruthompalPage />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-conditions" element={<TermsConditions />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/shipping-policy" element={<ShippingPolicy />} />
         </Routes>
         <Footer />
       </CartProvider>

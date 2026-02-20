@@ -63,12 +63,12 @@ const Footer: React.FC = () => {
 
             <div className="footer-bottom">
                 <div className="container footer-bottom-inner">
-                    <span>© 2024 AmmaFoods. All rights reserved.</span>
+                    <span>© 2026 AmmaFoods. All rights reserved.</span>
                     <div className="footer-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms & Conditions</a>
-                        <a href="#">Refund Policy</a>
-                        <a href="#">Shipping Policy</a>
+                        <Link to="/privacy-policy">Privacy Policy</Link>
+                        <Link to="/terms-conditions">Terms &amp; Conditions</Link>
+                        <Link to="/refund-policy">Refund Policy</Link>
+                        <Link to="/shipping-policy">Shipping Policy</Link>
                     </div>
                 </div>
             </div>
