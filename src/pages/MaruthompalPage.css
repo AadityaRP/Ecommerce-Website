@@ -504,11 +504,26 @@
 
     .maruthompal-hero-inner {
         flex-direction: column;
-        gap: 16px;
+        align-items: center;
+        gap: 24px;
     }
 
+    /* Show AI image on mobile — center it below the text */
     .maruthompal-hero-img-wrap {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 2;
+        /* always below text on mobile */
+    }
+
+    .maruthompal-hero-img {
+        max-width: 160px;
+    }
+
+    .ai-img-pulse-ring {
+        width: 160px;
+        height: 160px;
     }
 
     .maruthompal-grid {
@@ -528,7 +543,19 @@
     .stat-item {
         padding: 0 16px 0 0;
     }
+
+    /* Modal — full-width on mobile */
+    .ai-modal {
+        width: 95%;
+        padding: 28px 20px 24px;
+    }
+
+    .ai-modal-img {
+        width: 150px;
+        height: 150px;
+    }
 }
+
 
 @media (max-width: 400px) {
     .maruthompal-grid {

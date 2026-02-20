@@ -73,13 +73,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
 
-            {/* Account strip (logout reference) */}
-            <div className="logout-strip">
-                <div className="container logout-inner">
-                    <span>🌿 Logged in with +91 98765 43210</span>
-                    <button className="logout-btn">Log out</button>
-                </div>
-            </div>
+
         </footer>
     );
 };
