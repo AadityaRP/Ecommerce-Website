@@ -1,0 +1,349 @@
+.checkout-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 28px 0 32px;
+    gap: 0;
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--mid-gray);
+    min-width: 100px;
+}
+
+.step.active {
+    color: var(--primary);
+}
+
+.step-num {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 2px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background: var(--white);
+}
+
+.step.active .step-num {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
+}
+
+.step-line {
+    flex: 1;
+    height: 2px;
+    background: var(--border);
+    max-width: 80px;
+}
+
+.checkout-layout {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 32px;
+    align-items: flex-start;
+    padding-bottom: 60px;
+}
+
+.checkout-form-wrap {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+}
+
+.form-title {
+    font-size: 1.3rem;
+    color: var(--black);
+    margin-bottom: 24px;
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-row.two-col {
+    flex-direction: row;
+    gap: 16px;
+}
+
+.form-row.two-col .form-field {
+    flex: 1;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+    padding: 12px 14px;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.92rem;
+    color: var(--text);
+    background: var(--white);
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.form-field.error input,
+.form-field.error select,
+.form-field.error textarea {
+    border-color: var(--red);
+}
+
+.field-error {
+    font-size: 0.75rem;
+    color: var(--red);
+}
+
+.form-field textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.phone-field {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: border-color var(--transition);
+}
+
+.phone-field:focus-within {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.1);
+}
+
+.country-code {
+    padding: 12px 12px;
+    background: var(--off-white);
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-right: 1px solid var(--border);
+    white-space: nowrap;
+}
+
+.phone-field input {
+    flex: 1;
+    border: none;
+    padding: 12px 14px;
+}
+
+.phone-field input:focus {
+    box-shadow: none;
+}
+
+.save-as-options {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.save-as-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 2px solid var(--border);
+    border-radius: 50px;
+    background: transparent;
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text);
+    transition: all var(--transition);
+}
+
+.save-as-btn.active {
+    border-color: var(--primary);
+    background: #e8f5e9;
+    color: var(--primary);
+}
+
+.save-as-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+}
+
+.save-as-note {
+    font-size: 0.72rem;
+    color: var(--text-light);
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    flex-wrap: wrap;
+    line-height: 1.5;
+}
+
+.save-as-note span {
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.submit-btn {
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: var(--radius-lg);
+    padding: 16px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all var(--transition);
+    margin-top: 8px;
+}
+
+.submit-btn:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(46, 125, 50, 0.3);
+}
+
+/* Sidebar */
+.checkout-sidebar {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    position: sticky;
+    top: calc(var(--promo-h) + var(--header-h) + var(--nav-h) + 20px);
+}
+
+.checkout-sidebar h3 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+    color: var(--black);
+}
+
+.mini-order {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 16px;
+}
+
+.mini-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mini-item img {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--border);
+}
+
+.mini-name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--black);
+    display: block;
+}
+
+.mini-pack {
+    font-size: 0.72rem;
+    color: var(--text-light);
+}
+
+.mini-price {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.checkout-totals {
+    border-top: 1px solid var(--border);
+    padding-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+.total-row.grand {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+    margin-top: 4px;
+}
+
+.empty-checkout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    min-height: 60vh;
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    .checkout-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-sidebar {
+        position: static;
+    }
+
+    .form-row.two-col {
+        flex-direction: column;
+    }
+}
