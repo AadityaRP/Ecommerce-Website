@@ -1,4 +1,6 @@
 {
+    "outputDirectory": "dist",
+    "buildCommand": "",
     "rewrites": [
         {
             "source": "/(.*)",
